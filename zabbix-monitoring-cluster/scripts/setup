@@ -8,8 +8,8 @@ import flow;
 our $VERSION    = 0.5.0;
 
 sub centosPrepare {
-  my $rpmRepo = "http://mirror.kaiyuanshe.org/zabbix/zabbix/2.2/rhel/7/x86_64/zabbix-release-2.2-1.el7.noarch.rpm";
-  runCmd("rpm -q --quiet zabbix-release || rpm -i --quiet $rpmRepo && sed -i s/repo\.zabbix\.com/mirror.kaiyuanshe.org\\\\/zabbix/ /etc/yum.repos.d/zabbix.repo");
+  my $rpmRepo = "http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm"
+  runCmd("rpm -q --quiet zabbix-release || rpm -i --quiet $rpmRepo");
 }
 
 regFlows({
